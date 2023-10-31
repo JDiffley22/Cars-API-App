@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useContext, useEffect} from "react"
 import { Link } from "react-router-dom";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -10,21 +10,29 @@ import EditIcon from '@mui/icons-material/Edit';
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Typography from "@mui/material/Typography";
 
+import { CarsContext } from "../components/contexts/car.context";
+
 function CarsList() {
-  const cars = [
-    {
-      _id: 1,
-      name: 'Ferrari',
-      bhp: 1234,
-      avatar_url: "https://www.thecarexpert.co.uk/wp-content/uploads/2019/04/200083-car-ferrari-portofino-m-1920x960.jpeg.webp"
-    },
-    {
-      _id: 2,
-      name: 'Bugatti',
-      bhp: 1999,
-      avatar_url: "https://newsroomcdn.bugatti.com/w_3200/s3-newsroom-bugatti/fba83c23-536b-476f-8fce-3f6e7e8977e1.jpg"
-    }
-  ];
+const {cars, fetchCars} = useContext(CarsContext)
+
+useEffect (()=>{
+  fetchCars();
+}, [fetchCars])
+
+  // const cars = [
+  //   {
+  //     _id: 1,
+  //     name: 'Ferrari',
+  //     bhp: 1234,
+  //     avatar_url: "https://www.thecarexpert.co.uk/wp-content/uploads/2019/04/200083-car-ferrari-portofino-m-1920x960.jpeg.webp"
+  //   },
+  //   {
+  //     _id: 2,
+  //     name: 'Bugatti',
+  //     bhp: 1999,
+  //     avatar_url: "https://newsroomcdn.bugatti.com/w_3200/s3-newsroom-bugatti/fba83c23-536b-476f-8fce-3f6e7e8977e1.jpg"
+  //   }
+  // ];
 
   return (
     <>
