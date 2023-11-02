@@ -35,6 +35,10 @@ const schema = yup
       });
 
       useEffect(() => {
+        console.log(formState);
+      })
+
+      useEffect(() => {
         // console.log('useeffect', car);
         if (car) {
           reset(car);
