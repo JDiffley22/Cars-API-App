@@ -14,6 +14,7 @@ import theme from './theme/theme';
 import Layout from './components/Layout';
 
 import { CarsProvider } from './components/contexts/car.context';
+import { UIProvider } from "./components/contexts/UI.context";
 
 //import pages
 import List from './pages/List';

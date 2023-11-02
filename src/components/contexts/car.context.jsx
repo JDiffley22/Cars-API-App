@@ -173,10 +173,17 @@ export const CarsContext = createContext({
           });
         } catch (err) {
           console.log(err);
-          showMessage({
-            type: "error",
-            string: `Error deleting ${deletedCar.name}`,
-          });
+          if (deletedCar && deletedCar.name) {
+            showMessage({
+              type: "error",
+              string: `Error deleting ${deletedCar.name}`,
+            });
+          } else {
+            showMessage({
+              type: "error",
+              string: "Error deleting car",
+            });
+          }
         }
       },
       [cars, setCars, showMessage]
