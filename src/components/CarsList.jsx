@@ -11,7 +11,7 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Typography from "@mui/material/Typography";
 
 function CarsList({
-CarsList = [], 
+cars = [], 
 deleteHandler=() => console.log(`No deleteHandler provided to cars list`) 
 }) 
 
