@@ -10,7 +10,6 @@ import '@fontsource/roboto/700.css';
 
 import { ThemeProvider} from '@mui/material/styles';
 import theme from './theme/theme';
-
 import Layout from './components/Layout';
 
 import { CarsProvider } from './components/contexts/car.context';
