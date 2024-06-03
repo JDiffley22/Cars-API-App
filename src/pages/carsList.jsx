@@ -10,9 +10,8 @@ import EditIcon from '@mui/icons-material/Edit';
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Typography from "@mui/material/Typography";
 
-import { CarsContext } from "../components/contexts/car.context";
-
-import CarsList from "../components/carsList";
+import { CarsContext } from "../components/contexts/car.context.jsx";
+import CarsList from "../components/carsList.jsx";
 
 function CarsListPage() {
 const {cars, fetchCars, deleteCar} = useContext(CarsContext)
