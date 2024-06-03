@@ -7,7 +7,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-
+//themes
 import { ThemeProvider} from '@mui/material/styles';
 import theme from './theme/theme';
 import Layout from './components/Layout';
